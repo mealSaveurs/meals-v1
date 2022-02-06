@@ -1,24 +1,60 @@
-{% extends 'base.html.twig' %}
+{% extends 'log.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <section class="form-registration">
-        {% for flashError in app.flashes('verify_email_error') %}
-            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-        {% endfor %}
-
-        <h1>Register</h1>
-
-        {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.username) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
-        {{ form_end(registrationForm) }}
+    <div class="logo-register"><img src="{{ asset("assets/images/logo-orange.svg") }}" alt="Logo MealSaveurs" width="150px"></div>
+    <section class="form-register">
+        <div class="block-left">
+            <div class="form-links">
+                <a href="#" class="login">Se connecter</a>
+                <div class="separator"></div>
+                <a href="{{ path("app_register") }}" class="register">S'inscrire</a>
+            </div>
+            <div class="form">
+                <div>
+                    <p>Agrandit ta communauté, partage tes compétences culinaires & organise ton planning de la semaine !</p>
+                </div>
+                <div class="message-flash">
+                    {% for flashError in app.flashes('verify_email_error') %}
+                        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                    {% endfor %}
+                </div>
+                {{ form_start(registrationForm) }}
+                <div class="form-input">
+                    <label for="nom">Nom<sup>*</sup></label>
+                    {{ form_row(registrationForm.username) }}
+                </div>
+                <div class="form-input">
+                    <label for="email">Email<sup>*</sup></label>
+                    {{ form_row(registrationForm.email) }}
+                </div>
+                <div class="form-input">
+                    {{ form_row(registrationForm.plainPassword, {
+                        label: 'Password'
+                    }) }}
+                </div>
+                <div class="form-checkbox">
+                    <label for="condition">Accepter les conditions générales</label>
+                    {{ form_row(registrationForm.agreeTerms) }}
+                </div>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                <div class="form-button">
+                    <button class="btn-register" type="submit"> S'inscrire</button>
+                </div>
+                <div class="separator-links"><span class="trait-left"></span><span class="text-link">OU</span><span class="trait-right"></span></div>
+                <div class="form-button">
+                    <button class="btn-register-link" type="submit"><i class="fab fa-google"></i>&ensp;S'inscrire avec Google</button>
+                </div>
+                <div class="form-button">
+                    <button class="btn-register-link" type="submit"><i class="fab fa-facebook"></i>&ensp; S'inscrire avec Facebook</button>
+                </div>
+                <div class="form-button">
+                    <button class="btn-register-link" type="submit"><i class="fab fa-apple"></i>&ensp;S'inscrire avec Apple</button>
+                </div>
+                {{ form_end(registrationForm) }}
+            </div>
+            </div>
+        <div class="block-right"></div>
     </section>
 {% endblock %}
