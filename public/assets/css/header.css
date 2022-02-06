@@ -1,0 +1,105 @@
+/* Add a black background color to the top navigation */
+.header-nav {
+    background-color: var(--main-bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.header-nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.header-nav a:hover{
+    background-color: var(--main-bg-color-orange-dark);
+    border-radius: 10px;
+}
+
+.header-nav a:hover:last-child{
+    background-color: transparent;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.header-nav .icon {
+    display: none;
+}
+
+.header-nav  form{
+    position: relative;
+    width: 30rem;
+}
+
+.header-nav input{
+    height: 2.4rem;
+    width: 30rem;
+    outline: none;
+    border-radius: 99px;
+    border: 1px solid var(--main-bg-color-gray-light);
+}
+
+.header-nav input[type="search"]{
+    outline: none;
+    padding: 0 2.3rem;
+    font-size: large;
+}
+
+.header-nav button {
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.header-nav label{
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/* MENU HAMB*/
+#menu-bar .container-menuToggle {
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#menu-bar .bar1, #menu-bar  .bar2, #menu-bar .bar3{
+    background-color: var(--main-bg-color-orange-light);
+    width: 30px;
+    height: 4px;
+    border-radius: 99px;
+    margin: 6px 0;
+    transition: .4s;
+}
+
+/*responsive*/
+@media screen and (max-width: 1280px) {
+   .form-nav, .icone-links-nav{
+       display: none;
+   }
+    #menu-bar{
+        position: absolute;
+        top: 20px;
+        right: 60px;
+    }
+}

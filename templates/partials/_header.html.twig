@@ -1,0 +1,21 @@
+<header class="header-nav" id="header-nav">
+    <div id="menu-bar">
+        <div class="container-menuToggle" onclick="toggleSide()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div class="form-nav">
+        <form onsubmit="event.preventDefault();" role="search">
+            <label for="search">Rechercher</label>
+            <input id="search" type="search" placeholder="Rechercher" autofocus required />
+            <button type="submit"><img src="{{ asset('assets/icons/search-solid.svg') }}" alt="Icone de recherche" width="15px"></button>
+        </form>
+    </div>
+    <div class="icone-links-nav">
+        <a href="#"><img src="{{ asset('assets/icons/comment-alt-regular.svg') }}" alt="Icone de tchat" width="25px"></a>
+        <a href="#"><img src="{{ asset('assets/icons/bell-regular.svg') }}" alt="Icone de notifications" width="25px"></a>
+        <a href="#"><img src="{{ asset('assets/icons/user-circle-regular.svg') }}" alt="Icone de l'utilisateur" width="25px"></a>
+    </div>
+</header>

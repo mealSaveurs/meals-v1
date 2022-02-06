@@ -1,0 +1,27 @@
+:root {
+    --main-bg-color-orange-dark: #E64E0C;
+    --main-bg-color-orange-light: #F6681C;
+    --main-color-gray: #C4C4C4;
+    --main-color-green: #136F5A;
+    --main-bg-color-white: #FFFFFF;
+    --main-bg-color-gray-light: #EDEDED;
+    --main-color-black: #191919;
+    --main-bg-color:#FBFBFB;
+    --main-bg-color-yellow: #F5C22F;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:"nimbus-sans";
+    src:url("https://use.typekit.net/af/da0c19/00000000000000000001518d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/da0c19/00000000000000000001518d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/da0c19/00000000000000000001518d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;
+}
+
+html, body{
+    background-color: var(--main-bg-color);
+    font-family: "nimbus-sans", "sans-serif";
+}
