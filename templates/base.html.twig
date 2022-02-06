@@ -8,6 +8,7 @@
         <link rel="icon" href="{{ asset("assets/icons/logo-mealsaveurs.ico") }}" type="image/x-icon" />
         <link rel="stylesheet" href="{{ asset("assets/css/sidebar.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/header.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/css/registration.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/global.css") }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -25,7 +26,9 @@
                 <h2>Bonjour vous!</h2>
                 <div class="article"></div>
             </article>
+            <section class="block-body">
             {% block body %}{% endblock %}
+            </section>
         </main>
         <script src="{{ asset("assets/js/global.js") }}"></script>
     </body>
