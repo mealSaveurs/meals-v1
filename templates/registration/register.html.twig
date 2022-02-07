@@ -3,24 +3,28 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <div class="logo-register"><img src="{{ asset("assets/images/logo-orange.svg") }}" alt="Logo MealSaveurs" width="150px"></div>
-    <section class="form-register">
+    <div id="register">
+        <!--Block left -->
         <div class="block-left">
-            <div class="form-links">
-                <a href="#" class="login">Se connecter</a>
-                <div class="separator"></div>
-                <a href="{{ path("app_register") }}" class="register">S'inscrire</a>
+            <div class="logo-register"><img src="{{ asset("assets/images/logo-orange.svg") }}" alt="Logo MealSaveurs" width="150px"></div>
+            <div class="message-flash">
+                {% for flashError in app.flashes('verify_email_error') %}
+                    <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                {% endfor %}
             </div>
+            <!-- FORM -->
             <div class="form">
-                <div>
-                    <p>Agrandit ta communauté, partage tes compétences culinaires & organise ton planning de la semaine !</p>
+                <!-- Head -->
+                <div class="form-title">
+                    <a href="#" class="login">Se connecter</a>
+                    <div class="separator"></div>
+                    <a href="{{ path("app_register") }}" class="register">S'inscrire</a>
                 </div>
-                <div class="message-flash">
-                    {% for flashError in app.flashes('verify_email_error') %}
-                        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-                    {% endfor %}
-                </div>
+
+                <div><p class="slogan">Agrandit ta communauté, partage tes compétences culinaires & organise ton planning de la semaine !</p></div>
+                {% form_theme registrationForm 'foundation_5_layout.html.twig' %}
                 {{ form_start(registrationForm) }}
+                {{ form_errors(registrationForm) }}
                 <div class="form-input">
                     <label for="nom">Nom<sup>*</sup></label>
                     {{ form_row(registrationForm.username) }}
@@ -31,11 +35,11 @@
                 </div>
                 <div class="form-input">
                     {{ form_row(registrationForm.plainPassword, {
-                        label: 'Password'
+                        label: 'Mot de passe'
                     }) }}
                 </div>
                 <div class="form-checkbox">
-                    <label for="condition">Accepter les conditions générales</label>
+                    <label for="condition"><a href="{{ path('app_conditions') }}" target="_blank" class="conditions-link">Accepter les conditions générales d'utilisation</a></label>
                     {{ form_row(registrationForm.agreeTerms) }}
                 </div>
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
@@ -54,7 +58,8 @@
                 </div>
                 {{ form_end(registrationForm) }}
             </div>
-            </div>
+        </div>
+        <!--Block right -->
         <div class="block-right"></div>
-    </section>
+    </div>
 {% endblock %}

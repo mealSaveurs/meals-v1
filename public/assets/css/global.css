@@ -24,6 +24,8 @@
 html, body{
     background-color: var(--main-bg-color);
     font-family: "nimbus-sans", "sans-serif";
+    margin:0;
+    padding: 0;
 }
 
 main{

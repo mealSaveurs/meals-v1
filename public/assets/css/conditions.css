@@ -1,0 +1,19 @@
+.conditions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.logo-condition{
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+.title-condition{
+    text-align: center;
+}
+.article-condition{
+    max-width: 900px;
+    margin: 30px;
+}
