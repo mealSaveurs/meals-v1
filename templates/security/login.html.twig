@@ -1,0 +1,54 @@
+{% extends 'log.html.twig' %}
+
+{% block title %}Se connecter{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+<form method="post">
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    <div class="form-input" >
+        <label for="inputEmail">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+    </div>
+    <div class="form-input" >
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+    </div>
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+    <div  class="login-checkbox">
+        <div class="remember_me">
+            <label>
+                <input type="checkbox" name="_remember_me"> Se souvenir de moi
+            </label>
+        </div>
+        <div class="forgot-password">
+            <a href="#">Mot de passe oublié ?</a>
+        </div>
+    </div>
+    <div class="form-button">
+        <button class="btn-register" type="submit"> Se connecter</button>
+    </div>
+    <div class="separator-links"><span class="trait-left"></span><span class="text-link">OU</span><span class="trait-right"></span></div>
+    <div class="form-button">
+        <button class="btn-register-link" type="submit"><i class="fab fa-google"></i>&ensp;S'inscrire avec Google</button>
+    </div>
+    <div class="form-button">
+        <button class="btn-register-link" type="submit"><i class="fab fa-facebook"></i>&ensp; S'inscrire avec Facebook</button>
+    </div>
+    <div class="form-button">
+        <button class="btn-register-link" type="submit"><i class="fab fa-apple"></i>&ensp;S'inscrire avec Apple</button>
+    </div>
+    <div class="choice-register">
+        <p>Vous n’avez pas encore de compte ? &ensp; <a href="{{ path('app_register') }}" class="login-link-register">S'inscrire</a></p>
+    </div>
+    <p><a href="{{ path('app_home') }}" class="login-next">Continuer sans s'inscrire</a></p>
+</form>
+{% endblock %}

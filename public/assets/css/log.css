@@ -8,7 +8,10 @@
     top:20px;
     left: 30px;
 }
-
+/* ______________________________________________
+            REGISTER
+______________________________________________
+*/
 /*global block*/
 #register{
     display:flex;
@@ -29,7 +32,6 @@ Erreur
  */
 .error {
     color:var(--main-bg-color-orange-dark);
-    list-style: none;
 }
 
 /*Form title*/
@@ -41,7 +43,15 @@ Erreur
 }
 
 .form-title a.login{
-    color: var(--main-bg-color-gray-light);
+     color: var(--main-bg-color-gray-light);
+     font-size: 30px;
+     font-weight: bold;
+     margin-right: 20px;
+     text-decoration: none;
+ }
+
+.form-title a.login-active{
+    color: black;
     font-size: 30px;
     font-weight: bold;
     margin-right: 20px;
@@ -49,6 +59,14 @@ Erreur
 }
 
 .form-title a.register{
+    color: var(--main-bg-color-gray-light);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.form-title a.register-active{
     color: black;
     font-size: 30px;
     font-weight: bold;
@@ -177,6 +195,40 @@ Erreur
     font-size: 15px;
 }
 
+/* ______________________________________________
+            LOGIN
+______________________________________________
+*/
+
+.login-checkbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.choice-register{
+    margin-bottom: 60px;
+}
+
+.login-link-register{
+    font-size: 20px;
+    color: var(--main-color-green);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-next{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.login-next:hover{
+    color: var(--main-bg-color-orange-dark);
+}
+
+p.slogan{
+    margin-bottom: 30px;
+}
 
 
 /*Responsive*/
@@ -223,6 +275,9 @@ Erreur
     .form-title a.login, .form-title a.register, .slogan{
         font-size: 20px;
     }
+    .form-title a.login-active, .form-title a.register-active{
+        font-size: 20px;
+    }
     .separator{
         height: 20px;
     }
@@ -231,5 +286,28 @@ Erreur
         margin-left: -50px;
     }
 
+    /*LOGIN*/
+    .login-checkbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .remember_me, .forgot-password{
+        margin: 10px 0;
+    }
+
+    .choice-register{
+        margin-bottom: 30px;
+    }
+
+    .login-link-register{
+        font-size: 14px;
+    }
+
+    .login-next{
+        font-size: 14px;
+    }
 
 }
+

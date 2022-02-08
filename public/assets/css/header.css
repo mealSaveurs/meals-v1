@@ -1,7 +1,6 @@
 /* Add a black background color to the top navigation */
 .header-nav {
     background-color: var(--main-bg-color);
-    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -21,12 +20,12 @@
 }
 
 /* Add an active class to highlight the current page */
-.header-nav a:hover{
+.header-nav .link-icon:hover{
     background-color: var(--main-bg-color-orange-dark);
     border-radius: 10px;
 }
 
-.header-nav a:hover:last-child{
+.header-nav .link-icon:hover:last-child{
     background-color: transparent;
 }
 
@@ -74,6 +73,38 @@
     width: 1px;
     overflow: hidden;
 }
+
+/*Icones menu*/
+.icone-links-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* USER LINKS */
+.user-link, .tchat-link, .notification-link{
+    position:relative;
+    display: block;
+}
+
+.dropdown-user, .dropdown-tchat, .dropdown-notification{
+    display: none;
+    height: auto;
+    position: absolute;
+    top:80%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    background-color: var(--main-bg-color-orange-dark);
+    border-radius: 10px;
+}
+
+.dropdown-user a:hover, .dropdown-tchat a:hover, .dropdown-notification a:hover{
+    color: var(--main-bg-color-white);
+}
+.user-link:hover .dropdown-user, .tchat-link:hover .dropdown-tchat, .notification-link:hover .dropdown-notification {
+    display: block;
+}
+
 
 /* MENU HAMB*/
 #menu-bar .container-menuToggle {

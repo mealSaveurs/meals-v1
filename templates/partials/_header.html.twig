@@ -14,8 +14,30 @@
         </form>
     </div>
     <div class="icone-links-nav">
-        <a href="#"><img src="{{ asset('assets/icons/comment-alt-regular.svg') }}" alt="Icone de tchat" width="25px"></a>
-        <a href="#"><img src="{{ asset('assets/icons/bell-regular.svg') }}" alt="Icone de notifications" width="25px"></a>
-        <a href="#"><img src="{{ asset('assets/icons/user-circle-regular.svg') }}" alt="Icone de l'utilisateur" width="25px"></a>
+        <div class="link-icon tchat-link"><a href="#"><img src="{{ asset('assets/icons/comment-alt-regular.svg') }}" alt="Icone de tchat" width="25px"></a>
+            <div class="dropdown-tchat">
+                <div><a href="#">Message 1</a></div>
+                <div><a href="#">Message 2</a></div>
+                <div><a href="#">Message 3</a></div>
+            </div>
+        </div>
+        <div class="link-icon notification-link"><a href="#"><img src="{{ asset('assets/icons/bell-regular.svg') }}" alt="Icone de notifications" width="25px"></a>
+            <div class="dropdown-notification">
+                <div><a href="#">Notification 1</a></div>
+                <div><a href="#">Notification 2</a></div>
+                <div><a href="#">Notification 3</a></div>
+            </div>
+        </div>
+        <div class="link-icon user-link"><a href="#"><img src="{{ asset('assets/icons/user-circle-regular.svg') }}" alt="Icone de l'utilisateur" width="25px"></a>
+            <div class="dropdown-user">
+                {% if app.user %}
+                    <div><a href="{{ path('app_logout') }}">Se déconnecter</a></div>
+                {% else %}
+                    <div><a href="{{ path('app_login') }}">Se connecter</a></div>
+                    <div><a href="{{ path('app_register') }}">S'inscrire</a></div>
+                {% endif %}
+            </div>
+        </div>
+
     </div>
 </header>

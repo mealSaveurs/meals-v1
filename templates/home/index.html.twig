@@ -2,4 +2,11 @@
 
 {% block title %}Home{% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+    <article class="article-main">
+        {% if app.user.username %}
+            <h2>Bonjour {{ app.user.username | upper }}!</h2>
+        {% endif %}
+        <div class="article"></div>
+    </article>
+{% endblock %}
