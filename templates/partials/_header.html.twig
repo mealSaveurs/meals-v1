@@ -28,7 +28,7 @@
                 <div><a href="#">Notification 3</a></div>
             </div>
         </div>
-        <div class="link-icon user-link"><a href="#"><img src="{{ asset('assets/icons/user-circle-regular.svg') }}" alt="Icone de l'utilisateur" width="25px"></a>
+        <div class="link-icon user-link"><a href="{{ path('app_profile') }}"><img src="{{ asset('assets/icons/user-circle-regular.svg') }}" alt="Icone de l'utilisateur" width="25px"></a>
             <div class="dropdown-user">
                 {% if app.user %}
                     <div><a href="{{ path('app_logout') }}">Se déconnecter</a></div>

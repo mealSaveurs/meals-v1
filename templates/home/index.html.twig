@@ -4,7 +4,7 @@
 
 {% block body %}
     <article class="article-main">
-        {% if app.user.username %}
+        {% if app.user %}
             <h2>Bonjour {{ app.user.username | upper }}!</h2>
         {% endif %}
         <div class="article"></div>

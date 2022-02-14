@@ -30,12 +30,16 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
-	            'label' => false,
+	            'label' => 'registrationForm.agreeTerms.label',
                 'constraints' => [
                     new IsTrue([
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
+	            'label_translation_parameters' => [
+					'agreeTerms' => "Accepter les conditions générales d'utilisation"
+	            ]
+	            
             ])
             ->add('plainPassword', RepeatedType::class, [
                 // instead of being set onto the object directly,

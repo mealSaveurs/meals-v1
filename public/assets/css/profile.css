@@ -1,0 +1,135 @@
+.title-profile{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-update-profil{
+    text-decoration: none;
+    background-color: var(--main-bg-color-orange-dark);
+    color:var(--main-bg-color-white);
+    padding: 12px 54px;
+    border-radius: 34px;
+}
+
+.edit-icon{
+    width: 12px;
+    margin-right: 20px;
+}
+
+.banner-profile {
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-profile{
+    width: 366px;
+    height: 116px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 105px 60px -60px;
+}
+
+.header-follow{
+    width: 471px;
+    height: 88px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 6px #0000000F;
+    border-radius: 10px;
+    text-align: center;
+    margin: 15px 105px 60px 0;
+}
+
+.header-switch{
+    position: relative;
+    width: 253px;
+    transform: translateX(50%);
+}
+.separator-profile{
+    width: 1413px;
+ }
+
+.title-switch-left{
+    position:absolute;
+    top:40%;
+    left: -60px;
+    transform: translateY(-50%);
+}
+.title-switch-right{
+    position:absolute;
+    top:40%;
+    left:126px;
+    transform: translateY(-50%);
+}
+
+/*Checkbox*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0 14px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider checkbox */
+.slider {
+    width: 112px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: -20px;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-bg-color-white);
+    box-shadow: var(--main-bg-color-gray-light) 0px 2px 5px -1px, var(--main-bg-color-gray-light) 0px 1px 3px -1px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--main-bg-color-orange-dark);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--main-bg-color-white);
+    box-shadow: var(--main-bg-color-gray-light) 0px 2px 5px -1px, var(--main-bg-color-gray-light) 0px 1px 3px -1px;
+}
+
+input:focus + .slider {
+    box-shadow: var(--main-bg-color-gray-light) 0px 2px 5px -1px, var(--main-bg-color-gray-light) 0px 1px 3px -1px;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translateX(66px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

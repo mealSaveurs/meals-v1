@@ -29,20 +29,26 @@
         </div>
         <!-- FORM -->
         <div class="form">
+
+            {% if app.request.get('_route') == 'app_login' %}
             <!-- Head -->
+           <div class="form-title">
+                <a href="{{ path("app_login") }}" class="login-active">Se connecter</a>
+                <div class="separator"></div>
+                <a href="{{ path("app_register") }}" class="register">S'inscrire</a>
+           </div>
+                <div><p class="slogan">Agrandit ta communauté, partage tes compétences culinaires & organise ton planning de la semaine !</p></div>
+            {% endif %}
+            {% if app.request.get('_route') == 'app_register' %}
             <div class="form-title">
-                {% if app.request.get('_route') == 'app_login' %}
-                    <a href="{{ path("app_login") }}" class="login-active">Se connecter</a>
-                    <div class="separator"></div>
-                    <a href="{{ path("app_register") }}" class="register">S'inscrire</a>
-                {% endif %}
-                {% if app.request.get('_route') == 'app_register' %}
-                    <a href="{{ path("app_login") }}" class="login">Se connecter</a>
-                    <div class="separator"></div>
-                    <a href="{{ path("app_register") }}" class="register-active">S'inscrire</a>
-                {% endif %}
+                <a href="{{ path("app_login") }}" class="login">Se connecter</a>
+                <div class="separator"></div>
+                <a href="{{ path("app_register") }}" class="register-active">S'inscrire</a>
             </div>
-            <div><p class="slogan">Agrandit ta communauté, partage tes compétences culinaires & organise ton planning de la semaine !</p></div>
+                <div><p class="slogan">Agrandit ta communauté, partage tes compétences culinaires & organise ton planning de la semaine !</p></div>
+            {% endif %}
+
+
             <!-- form -->
             {% block body %}{% endblock %}
         </div>

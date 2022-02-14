@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+    <div class="title-profile">
+        <h1>Mon Profil</h1>
+        <a href="#" class="btn-update-profil"><img class="edit-icon" src="{{ asset('assets/icons/pen-solid.svg') }}" alt="Edit icon">Modifier le profil</a>
+    </div>
+    <!--news -->
+    <div class="banner-profile">
+        <div class="header-profile">
+            <div><img src="{{ asset('assets/icons/user-secret-solid.svg') }}" alt="User secret" width="55px"></div>
+            <div class="username-profile">
+                <p><b>{{ app.user.username | upper }}</b></p>
+                <p>Rennes</p>
+            </div>
+        </div>
+        <div class="header-follow">
+            <div>
+                <p>130</p>
+                <p>Publications</p>
+            </div>
+            <div>
+                <p>130</p>
+                <p>Follow</p>
+            </div>
+            <div>
+                <p>279</p>
+                <p>Abonnement</p>
+            </div>
+        </div>
+        <div class="header-switch">
+            <div class="title-switch-left">Privé</div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="title-switch-right">Public</div>
+        </div>
+    </div>
+    <div class="separator-profile"></div>
+{% endblock %}

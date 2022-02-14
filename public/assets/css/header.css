@@ -1,16 +1,17 @@
 /* Add a black background color to the top navigation */
 .header-nav {
+    width: 100%;
     background-color: var(--main-bg-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding-top: 20px;
+    margin-bottom: 45px;
 }
 
 /* Style the links inside the navigation bar */
 .header-nav a {
-    float: left;
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -37,6 +38,11 @@
 .header-nav  form{
     position: relative;
     width: 30rem;
+}
+
+.form-nav{
+    position: absolute;
+    left: 356px;
 }
 
 .header-nav input{
@@ -78,6 +84,7 @@
 .icone-links-nav {
     display: flex;
     align-items: center;
+    margin-left: 771px;
 }
 
 /* USER LINKS */
@@ -112,6 +119,7 @@
     position: absolute;
     top:0;
     left:0;
+    display:none;
 }
 
 #menu-bar .bar1, #menu-bar  .bar2, #menu-bar .bar3{
@@ -132,5 +140,9 @@
         position: absolute;
         top: 20px;
         right: 60px;
+    }
+
+    #menu-bar .container-menuToggle {
+        display:block;
     }
 }

@@ -20,7 +20,7 @@
         }) }}
     </div>
     <div class="form-checkbox">
-        <label for="condition"><a href="{{ path('app_conditions') }}" target="_blank" class="conditions-link">Accepter les conditions générales d'utilisation</a></label>
+        <label for="condition"><a href="{{ path('app_conditions') }}" target="_blank" class="conditions-link">Cliquez içi</a></label>
         {{ form_row(registrationForm.agreeTerms) }}
     </div>
     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
