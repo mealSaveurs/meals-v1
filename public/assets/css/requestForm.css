@@ -1,0 +1,63 @@
+.form-request{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform:translateY(-10%);
+}
+
+.request-container{
+    height: 250px;
+    max-width: 400px;
+    padding:10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+}
+
+.title-request{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.mail-request{
+    margin: 0 0 15px 5px;
+    padding: 5px 15px;
+    width: 300px;
+    border-radius: 99px;
+    outline: none;
+    border: 1px solid var(--main-bg-color-gray-light);
+}
+
+.mail-request:focus{
+    border: 1px solid var(--main-bg-color-orange-light);
+}
+
+.msg-request{
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.box-request-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-request{
+    display: block;
+    cursor:pointer;
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--main-bg-color-orange-dark);
+    width: 150px;
+    border-radius: 99px;
+    color: var(--main-bg-color-white);
+    margin: 10px 0;
+}
+
+.change-password{
+    margin: 15px 0 15px 5px;
+    padding: 5px 15px;
+    width: 300px;
+    border-radius: 99px;
+    outline: none;
+    border: 1px solid var(--main-bg-color-gray-light);
+}
