@@ -22,7 +22,7 @@ ______________________________________________
 .block-left{
     width: 50%;
     min-width: 500px;
-    height:100vh;
+    height:max-content;
     margin: 50px 0 0 0;
     display: flex;
     justify-content: center;
